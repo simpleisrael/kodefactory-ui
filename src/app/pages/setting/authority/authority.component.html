@@ -1,0 +1,16 @@
+<nb-card>
+  <nb-card-header>
+    Authorities
+
+    <div>
+      <!--<button class="btn btn-primary btn-tn float-right" (click)="newEntity()">New</button>-->
+      <button class="btn btn-primary btn-tn float-right margin-right-10" [disabled]="!selectedEntity" (click)="showModal()">Edit</button>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+
+    <ng2-smart-table [settings]="settings" [source]="source" (userRowSelect)="rowSelected($event)"></ng2-smart-table>
+
+  </nb-card-body>
+</nb-card>
+

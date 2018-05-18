@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <span>{{ 'Edit Configuratiuon'}}</span>
+  <button class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+  <form #form="ngForm" autocomplete="off">
+
+    <div class="form-group">
+      <label>{{config.configKey}} </label><br/>
+
+      <nb-checkbox *ngIf="renderValue === 'boolean'" [(ngModel)]="config.data" name="value" [value]="config.data"></nb-checkbox>
+      <input *ngIf="renderValue === 'number'" class="form-control" type="number"  name="value" #name="ngModel" [(ngModel)]="config.data" [required]="true"/>
+      <input *ngIf="renderValue === 'date'" class="form-control" type="datetime-local"  name="value" #name="ngModel" [(ngModel)]="config.data" [required]="true"/>
+      <input *ngIf="renderValue === 'string'" class="form-control" type="text"  name="value" #name="ngModel" [(ngModel)]="config.data" [required]="true"/>
+      <input *ngIf="renderValue === 'any'" class="form-control" type="date"  name="value" #name="ngModel" [(ngModel)]="config.data" [required]="true"/>
+
+    </div>
+
+
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button class="btn btn-md btn-primary" [disabled]="!form.valid || loading" (click)="save()">Save changes</button>
+</div>
+
+
+
+

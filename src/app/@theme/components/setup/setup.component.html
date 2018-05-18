@@ -1,0 +1,232 @@
+<nb-auth-block>
+
+
+  <!-- Company Information -->
+  <div *ngIf="step === 1">
+
+    <h2 class="title">Company Information</h2>
+
+    <form (ngSubmit)="continueRegistration()" #form="ngForm" autocomplete="nope">
+
+      <div>
+
+        <div class="form-group">
+          <label for="input-name" class="sr-only">Name</label>
+          <input name="name" [(ngModel)]="company.name" id="input-name"
+                 class="form-control" placeholder="Name" #name="ngModel"
+                 [class.form-control-danger]="name.invalid && name.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="name.invalid && name.touched && name.errors?.required">
+            Name is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-address" class="sr-only">Address</label>
+          <input name="address" [(ngModel)]="company.address" id="input-address"
+                 class="form-control" placeholder="Address" #address="ngModel"
+                 [class.form-control-danger]="address.invalid && address.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="address.invalid && address.touched && address.errors?.required">
+            Address is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-address" class="sr-only">Email</label>
+          <input name="email" [(ngModel)]="company.email" id="input-email"
+                 class="form-control" placeholder="Email Address" #email="ngModel"
+                 [class.form-control-danger]="email.invalid && email.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="email.invalid && email.touched && email.errors?.required">
+            Email is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-phone" class="sr-only">Phone</label>
+          <input name="phone" [(ngModel)]="company.phone" id="input-phone" type="number"
+                 class="form-control" placeholder="Phone Number" #phone="ngModel"
+                 [class.form-control-danger]="phone.invalid && phone.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="phone.invalid && phone.touched && phone.errors?.required">
+            Phone is required!
+          </small>
+        </div>
+
+
+
+        <button [disabled]="submitted || !form.valid" class="btn btn-block btn-hero-success"
+                [class.btn-pulse]="submitted">
+          Continue
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+
+  <!-- Branch Information -->
+  <div *ngIf="step === 2">
+
+    <h2 class="title">Branch Information</h2>
+
+    <form (ngSubmit)="continueRegistration()" #form="ngForm" autocomplete="nope">
+
+      <div>
+
+        <div class="form-group">
+          <label for="input-name2" class="sr-only">Name</label>
+          <input name="name" [(ngModel)]="branch.name" id="input-name2"
+                 class="form-control" placeholder="Name" #name="ngModel"
+                 [class.form-control-danger]="name.invalid && name.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="name.invalid && name.touched && name.errors?.required">
+            Name is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-address2" class="sr-only">Address</label>
+          <input name="address" [(ngModel)]="branch.address" id="input-address2"
+                 class="form-control" placeholder="Address" #address="ngModel"
+                 [class.form-control-danger]="address.invalid && address.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="address.invalid && address.touched && address.errors?.required">
+            Address is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-email2" class="sr-only">Email</label>
+          <input name="email" [(ngModel)]="branch.email" id="input-email2"
+                 class="form-control" placeholder="Email Address" #email="ngModel"
+                 [class.form-control-danger]="email.invalid && email.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="email.invalid && email.touched && email.errors?.required">
+            Email is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-phone2" class="sr-only">Phone</label>
+          <input name="phone" [(ngModel)]="branch.phone" id="input-phone2" type="number"
+                 class="form-control" placeholder="Phone Number" #phone="ngModel"
+                 [class.form-control-danger]="phone.invalid && phone.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="phone.invalid && phone.touched && phone.errors?.required">
+            Phone is required!
+          </small>
+        </div>
+
+
+
+        <button [disabled]="submitted || !form.valid" class="btn btn-block btn-hero-success"
+                [class.btn-pulse]="submitted">
+          Continue
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+
+  <!-- Branch Information -->
+  <div *ngIf="step === 3">
+
+    <h2 class="title">User Account</h2>
+
+    <form (ngSubmit)="continueRegistration()" #form="ngForm" autocomplete="nope">
+
+      <div>
+
+        <div class="form-group">
+          <label for="first-name" class="sr-only">First Name</label>
+          <input name="name" [(ngModel)]="user.firstname" id="first-name"
+                 class="form-control" placeholder="First Name" #name="ngModel"
+                 [class.form-control-danger]="name.invalid && name.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="name.invalid && name.touched && name.errors?.required">
+            First Name is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name" class="sr-only">Last Name</label>
+          <input name="address" [(ngModel)]="user.lastname" id="last-name"
+                 class="form-control" placeholder="Last Name" #address="ngModel"
+                 [class.form-control-danger]="address.invalid && address.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="address.invalid && address.touched && address.errors?.required">
+            Last Name is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-email3" class="sr-only">Email</label>
+          <input name="email" [(ngModel)]="user.email" id="input-email3"
+                 class="form-control" placeholder="Email Address" #email="ngModel"
+                 [class.form-control-danger]="email.invalid && email.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="email.invalid && email.touched && email.errors?.required">
+            Email is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-password" class="sr-only">Password</label>
+          <input name="password" [(ngModel)]="user.password" id="input-password"
+                 class="form-control" placeholder="Password" #password="ngModel"
+                 [class.form-control-danger]="password.invalid && password.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="password.invalid && password.touched && password.errors?.required">
+            Password is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-confirmPassword" class="sr-only">Confirm Password</label>
+          <input name="password" [(ngModel)]="user.confirmPassword" id="input-confirmPassword"
+                 class="form-control" placeholder="Confirm Password Address" #confirmPassword="ngModel"
+                 [class.form-control-danger]="confirmPassword.invalid && confirmPassword.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="confirmPassword.invalid && confirmPassword.touched && confirmPassword.errors?.required">
+            Confirm Password is required!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="input-phone2" class="sr-only">Phone</label>
+          <input name="phone" [(ngModel)]="user.phone" id="input-phone3" type="number"
+                 class="form-control" placeholder="Phone Number" #phone="ngModel"
+                 [class.form-control-danger]="phone.invalid && phone.touched" autofocus
+                 [required]="true">
+          <small class="form-text error" *ngIf="phone.invalid && phone.touched && phone.errors?.required">
+            Phone is required!
+          </small>
+        </div>
+
+
+
+        <button [disabled]="submitted || !form.valid" class="btn btn-block btn-hero-success"
+                [class.btn-pulse]="submitted">
+          Submit
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+</nb-auth-block>

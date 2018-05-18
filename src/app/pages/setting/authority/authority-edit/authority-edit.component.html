@@ -1,0 +1,47 @@
+<div class="modal-header">
+  <span>{{ title }}</span>
+  <button class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+  <form #form="ngForm" autocomplete="off">
+
+    <div class="form-group">
+      <label for="name">Name </label>
+      <input type="text" class="form-control" id="name" placeholder="Name" name="name"
+             [(ngModel)]="entity.name" #name="ngModel" [disabled]="true"
+             [required]="true">
+      <small class="form-text error" *ngIf="name.invalid && name.touched && name.errors?.required">
+        Name is required!
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="label">Label </label>
+      <input type="text" class="form-control" id="label" placeholder="Label" name="label"
+             [(ngModel)]="entity.label" #label="ngModel"
+             [required]="true">
+      <small class="form-text error" *ngIf="label.invalid && label.touched && label.errors?.required">
+        Label is required!
+      </small>
+    </div>
+
+
+    <div class="form-group">
+      <label for="description">Description </label>
+      <input type="text" class="form-control" id="description" placeholder="Description" name="description"
+             [(ngModel)]="entity.description" #description="ngModel"
+             [required]="true">
+      <small class="form-text error" *ngIf="description.invalid && description.touched && description.errors?.required">
+        Description is required!
+      </small>
+    </div>
+
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button class="btn btn-md btn-primary" [disabled]="loading || !form.valid" (click)="save()">Save changes</button>
+</div>

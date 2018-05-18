@@ -1,0 +1,13 @@
+<ng4geo-autocomplete (componentCallback)="componentCallback($event)" *ngIf="!found" [userSettings]="userSettings"></ng4geo-autocomplete>
+<!--<div class="form-group">
+  <input placeholder="Search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+</div>-->
+<br/>
+<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" *ngIf="found">
+  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>
+
+<div *ngIf="found" style="">
+  <br/>
+  <button class="btn btn-md btn-primary" (click)="found = false" *ngIf="found">Edit Address</button>
+</div>

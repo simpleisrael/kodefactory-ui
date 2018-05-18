@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+//    "moduleResolution": "classic",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "rootDirs": ["src"],
+    "plugins": [
+      { "name": "tslint-language-service"}
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+//      "@ngx-core/*": ["app/@core/*"],
+//      "@ngx-data/*": ["app/@core/data/*"],
+//      "@ngx-theme/*": ["app/@theme*/*"],
+//      "@ngx-pages/*": ["app/pages*/*"],
+//      "@ngx-environments/*": ["src/environments/*"]
+    }
+  }
+}

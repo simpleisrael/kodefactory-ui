@@ -1,0 +1,11 @@
+@import '../../../@theme/styles/themes';
+@import '../../../../../node_modules/bootstrap/scss/mixins/breakpoints';
+@import '../../../../../node_modules/@nebular/theme/styles/global/bootstrap/breakpoints';
+
+@include nb-install-component() {
+
+  nb-card-body {
+    overflow: visible;
+  }
+
+}

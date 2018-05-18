@@ -1,0 +1,12 @@
+<nb-card>
+  <nb-card-header>
+    Pending Approvals
+
+    <button class="btn btn-primary btn-tn float-right" [disabled]="!selectedApproval" (click)="approve()">Approve</button>
+  </nb-card-header>
+  <nb-card-body>
+
+    <ng2-smart-table [settings]="settings" [source]="source"  (userRowSelect)="rowSelected($event)"></ng2-smart-table>
+
+  </nb-card-body>
+</nb-card>

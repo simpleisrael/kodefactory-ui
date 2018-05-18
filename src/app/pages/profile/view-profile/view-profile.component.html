@@ -1,0 +1,73 @@
+<div class="row show-grid">
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>
+        Profile
+      </nb-card-header>
+      <nb-card-body>
+
+        <form #form="ngForm" autocomplete="off">
+
+          <div class="row show-grid">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input-firstName">First Name</label>
+                <input name="firstname" [(ngModel)]="currentUser.firstname" id="input-firstName"
+                       class="form-control" placeholder="First Name" #firstname="ngModel"
+                       type="text" [disabled]="true">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input-lastName">Last Name</label>
+                <input name="lastname" [(ngModel)]="currentUser.lastname" id="input-lastName"
+                       class="form-control" placeholder="Last Name" #lastname="ngModel"
+                       type="text" [disabled]="true">
+              </div>
+            </div>
+          </div>
+
+          <div class="row show-grid">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input-email">Email</label>
+                <input name="email" [(ngModel)]="currentUser.email" id="input-email"
+                       class="form-control" placeholder="Email Name" #email="ngModel"
+                       type="text" [disabled]="true">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input-phone">Phone</label>
+                <input name="phone" [(ngModel)]="currentUser.phone" id="input-phone"
+                       class="form-control" placeholder="Phone" #phone="ngModel"
+                       type="text" [disabled]="true">
+              </div>
+            </div>
+          </div>
+
+          <div class="row show-grid">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input-role">Roles</label>
+                <input name="role" [(ngModel)]="roles" id="input-role"
+                       class="form-control" placeholder="Role" #role="ngModel"
+                       type="text" [disabled]="true">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="input-division">Division</label>
+              <input name="division" [(ngModel)]="myDivision" id="input-division"
+                     class="form-control" placeholder="Role" #division="ngModel"
+                     type="text" [disabled]="true">
+            </div>
+          </div>
+
+        </form>
+
+      </nb-card-body>
+    </nb-card>
+
+
+  </div>
+</div>

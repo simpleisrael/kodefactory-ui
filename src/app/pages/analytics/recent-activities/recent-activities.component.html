@@ -1,0 +1,40 @@
+<nb-card>
+  <nb-card-header>
+    <div class="row show-grid">
+      <div class="col-md-2">
+        <label for="input-startDate">Start Date</label>
+        <input name="startDate" [(ngModel)]="data.startDate" id="input-startDate"
+               class="form-control" placeholder="Start Date " #startDate="ngModel"
+               type="date">
+      </div>
+      <div class="col-md-2">
+        <label for="input-endDate">End Date</label>
+        <input name="endDate" [(ngModel)]="data.endDate" id="input-endDate"
+               class="form-control" placeholder="End Date " #endDate="ngModel"
+               type="date">
+      </div>
+      <div class="col-md-1">
+        <label for="input-startDate">&nbsp;</label>
+        <button class="btn btn-md btn-primary" [disabled]="loading" (click)="loadActivity()">
+          Submit
+        </button>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-3" style="z-index: 1000; overflow: visible;">
+        <div class="form-group">
+          <label>Division</label>
+          <ng-select [allowClear]="true"
+                     id="list"
+                     [items]="users"
+                     (selected)="selectUser($event)"
+                     [active]="[modifyObject(currentUser)]"
+                     style="z-index: 1000"
+                     placeholder="Select Division"></ng-select>
+        </div>
+      </div>
+    </div>
+
+  </nb-card-header>
+</nb-card>

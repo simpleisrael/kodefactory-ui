@@ -1,0 +1,54 @@
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/all';
+
+// loading progress bar theme
+@import './pace.theme';
+
+// install the framework and custom global styles
+@include nb-install() {
+
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+
+  // loading progress bar
+  @include ngx-pace-theme();
+
+
+  .ui-select-match > .btn {
+    text-align: left !important;
+    border: 2px solid #dadfe6;
+  }
+
+  .nb-theme-default .dropdown .dropdown-menu, .nb-theme-default .dropup .dropdown-menu {
+    margin: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border: solid 1px #dadfe6 !important;
+    width: 100%;
+    color: #ffffff;
+    padding: 0.75rem 0;
+    min-width: 100px;
+  }
+
+  .nb-theme-default .dropdown .dropdown-menu, .nb-theme-default .dropup .dropdown-menu {
+    border: solid 1px #dadfe6 !important;
+  }
+
+  .dropdown-menu {
+    display: block;
+    border: solid 1px #dadfe6;
+  }
+
+  .ui-select-container > .nb-theme-default .btn {
+    text-transform: none;
+
+  }
+
+};
