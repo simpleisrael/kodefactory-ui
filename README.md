@@ -1,3 +1,6 @@
+## Starter Angular Project for Kodefactory-lib Java Based Application
+
+
 [![Build Status](https://travis-ci.org/akveo/ngx-admin.svg?branch=master)](https://travis-ci.org/akveo/ngx-admin)
 [![Join the chat at https://gitter.im/ng2-admin/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ng2-admin/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Dependency Status](https://david-dm.org/akveo/ngx-admin/status.svg)](https://david-dm.org/akveo/ng2-admin)
@@ -29,9 +32,6 @@
 And many more!
 
 
- 
-## Documentation
-This template is using [Nebular](https://github.com/akveo/nebular) modules set, documentation and other useful articles could be found [here](https://akveo.github.io/nebular/#/docs/installation/based-on-starter-kit-ngxadmin).
 
 
 
